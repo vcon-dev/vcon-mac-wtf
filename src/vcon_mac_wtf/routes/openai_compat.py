@@ -71,13 +71,22 @@ async def create_transcription(
             suffix = file_suffix
 
     start = time.monotonic()
-    result = await transcribe_audio_bytes(
-        audio_bytes=audio_bytes,
-        suffix=suffix,
-        model=effective_model,
-        language=language,
-        word_timestamps=want_words,
-    )
+    try:
+        result = await transcribe_audio_bytes(
+            audio_bytes=audio_bytes,
+            suffix=suffix,
+            model=effective_model,
+            language=language,
+            word_timestamps=want_words,
+        )
+    except Exception as exc:
+        import gc
+        gc.collect()
+        logger.exception("Transcription failed for %s (%d bytes)", file.filename, len(audio_bytes))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Transcription engine error: {type(exc).__name__}: {exc}",
+        )
     processing_time = time.monotonic() - start
 
     # Format response
