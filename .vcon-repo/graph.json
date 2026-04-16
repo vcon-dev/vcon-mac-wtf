@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0.0",
+  "repo": "vcon-mac-wtf",
+  "repo_version": "0.1.0",
+  "archetype": "python-library",
+  "generated_at": "2026-04-16T15:15:46.068157+00:00",
+  "stats": {
+    "node_count": 33,
+    "edge_count": 12
+  },
+  "nodes": [
+    {
+      "id": "dependency:fastapi",
+      "type": "dependency",
+      "name": "fastapi",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:uvicorn",
+      "type": "dependency",
+      "name": "uvicorn",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:mlx-whisper",
+      "type": "dependency",
+      "name": "mlx-whisper",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:pydantic",
+      "type": "dependency",
+      "name": "pydantic",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:pydantic-settings",
+      "type": "dependency",
+      "name": "pydantic-settings",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:python-multipart",
+      "type": "dependency",
+      "name": "python-multipart",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:python-dotenv",
+      "type": "dependency",
+      "name": "python-dotenv",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "dependency:vcon-wtf",
+      "type": "dependency",
+      "name": "vcon-wtf",
+      "file": "pyproject.toml"
+    },
+    {
+      "id": "class:Settings",
+      "type": "class",
+      "name": "Settings",
+      "file": "src/vcon_mac_wtf/config.py",
+      "line": 6
+    },
+    {
+      "id": "class:MLXWhisperEngine",
+      "type": "class",
+      "name": "MLXWhisperEngine",
+      "file": "src/vcon_mac_wtf/engine/mlx_engine.py",
+      "line": 14
+    },
+    {
+      "id": "class:ModelManager",
+      "type": "class",
+      "name": "ModelManager",
+      "file": "src/vcon_mac_wtf/engine/model_manager.py",
+      "line": 19
+    },
+    {
+      "id": "function:lifespan",
+      "type": "function",
+      "name": "lifespan",
+      "file": "src/vcon_mac_wtf/main.py",
+      "line": 21
+    },
+    {
+      "id": "function:run",
+      "type": "function",
+      "name": "run",
+      "file": "src/vcon_mac_wtf/main.py",
+      "line": 56
+    },
+    {
+      "id": "class:TranscriptionResponseJson",
+      "type": "class",
+      "name": "TranscriptionResponseJson",
+      "file": "src/vcon_mac_wtf/models/openai_compat.py",
+      "line": 6
+    },
+    {
+      "id": "class:TranscriptionResponseVerbose",
+      "type": "class",
+      "name": "TranscriptionResponseVerbose",
+      "file": "src/vcon_mac_wtf/models/openai_compat.py",
+      "line": 12
+    },
+    {
+      "id": "class:ModelObject",
+      "type": "class",
+      "name": "ModelObject",
+      "file": "src/vcon_mac_wtf/models/openai_compat.py",
+      "line": 23
+    },
+    {
+      "id": "class:ModelListResponse",
+      "type": "class",
+      "name": "ModelListResponse",
+      "file": "src/vcon_mac_wtf/models/openai_compat.py",
+      "line": 30
+    },
+    {
+      "id": "class:HealthResponse",
+      "type": "class",
+      "name": "HealthResponse",
+      "file": "src/vcon_mac_wtf/models/responses.py",
+      "line": 8
+    },
+    {
+      "id": "class:ReadyResponse",
+      "type": "class",
+      "name": "ReadyResponse",
+      "file": "src/vcon_mac_wtf/models/responses.py",
+      "line": 14
+    },
+    {
+      "id": "class:ErrorResponse",
+      "type": "class",
+      "name": "ErrorResponse",
+      "file": "src/vcon_mac_wtf/models/responses.py",
+      "line": 20
+    },
+    {
+      "id": "class:Party",
+      "type": "class",
+      "name": "Party",
+      "file": "src/vcon_mac_wtf/models/vcon.py",
+      "line": 8
+    },
+    {
+      "id": "class:Dialog",
+      "type": "class",
+      "name": "Dialog",
+      "file": "src/vcon_mac_wtf/models/vcon.py",
+      "line": 14
+    },
+    {
+      "id": "class:Analysis",
+      "type": "class",
+      "name": "Analysis",
+      "file": "src/vcon_mac_wtf/models/vcon.py",
+      "line": 25
+    },
+    {
+      "id": "class:Vcon",
+      "type": "class",
+      "name": "Vcon",
+      "file": "src/vcon_mac_wtf/models/vcon.py",
+      "line": 36
+    },
+    {
+      "id": "function:health",
+      "type": "function",
+      "name": "health",
+      "file": "src/vcon_mac_wtf/routes/health.py",
+      "line": 12
+    },
+    {
+      "id": "function:ready",
+      "type": "function",
+      "name": "ready",
+      "file": "src/vcon_mac_wtf/routes/health.py",
+      "line": 17
+    },
+    {
+      "id": "function:list_models",
+      "type": "function",
+      "name": "list_models",
+      "file": "src/vcon_mac_wtf/routes/models.py",
+      "line": 12
+    },
+    {
+      "id": "function:create_transcription",
+      "type": "function",
+      "name": "create_transcription",
+      "file": "src/vcon_mac_wtf/routes/openai_compat.py",
+      "line": 35
+    },
+    {
+      "id": "function:transcribe_vcon",
+      "type": "function",
+      "name": "transcribe_vcon",
+      "file": "src/vcon_mac_wtf/routes/transcribe.py",
+      "line": 16
+    },
+    {
+      "id": "function:transcribe_audio_bytes",
+      "type": "function",
+      "name": "transcribe_audio_bytes",
+      "file": "src/vcon_mac_wtf/services/transcription.py",
+      "line": 11
+    },
+    {
+      "id": "function:process_vcon",
+      "type": "function",
+      "name": "process_vcon",
+      "file": "src/vcon_mac_wtf/services/vcon_processor.py",
+      "line": 30
+    },
+    {
+      "id": "function:convert_result_to_wtf",
+      "type": "function",
+      "name": "convert_result_to_wtf",
+      "file": "src/vcon_mac_wtf/services/wtf_converter.py",
+      "line": 9
+    },
+    {
+      "id": "document:readme-md",
+      "type": "document",
+      "name": "README.md",
+      "file": "README.md"
+    }
+  ],
+  "edges": [
+    {
+      "from": "class:Settings",
+      "to": "class:BaseSettings",
+      "type": "inherits"
+    },
+    {
+      "from": "class:TranscriptionResponseJson",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:TranscriptionResponseVerbose",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:ModelObject",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:ModelListResponse",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:HealthResponse",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:ReadyResponse",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:ErrorResponse",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:Party",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:Dialog",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:Analysis",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    },
+    {
+      "from": "class:Vcon",
+      "to": "class:BaseModel",
+      "type": "inherits"
+    }
+  ],
+  "subsystems": []
+}
